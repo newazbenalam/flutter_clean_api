@@ -20,7 +20,7 @@ class UserEntity {
   final String? actor;
   final List<String> alternateActors;
   final bool? alive;
-  final String? image;
+  String? image;
 
   UserEntity({
     required this.id,

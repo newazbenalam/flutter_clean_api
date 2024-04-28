@@ -4,27 +4,28 @@ import 'package:flutter_clean_api/features/user_list/domain/entities/users_entit
 import 'dart:convert';
 
 class UsersModel extends UserEntity {
-  UsersModel(
-      {required super.id,
-      required super.name,
-      required super.alternateNames,
-      required super.species,
-      required super.gender,
-      required super.house,
-      required super.dateOfBirth,
-      required super.yearOfBirth,
-      required super.wizard,
-      required super.ancestry,
-      required super.eyeColour,
-      required super.hairColour,
-      required super.wand,
-      required super.patronus,
-      required super.hogwartsStudent,
-      required super.hogwartsStaff,
-      required super.actor,
-      required super.alternateActors,
-      required super.alive,
-      required super.image});
+  UsersModel({
+    required super.id,
+    required super.name,
+    required super.alternateNames,
+    required super.species,
+    required super.gender,
+    required super.house,
+    required super.dateOfBirth,
+    required super.yearOfBirth,
+    required super.wizard,
+    required super.ancestry,
+    required super.eyeColour,
+    required super.hairColour,
+    required super.wand,
+    required super.patronus,
+    required super.hogwartsStudent,
+    required super.hogwartsStaff,
+    required super.actor,
+    required super.alternateActors,
+    required super.alive,
+    required super.image,
+  });
 
   UsersModel copyWith({
     String? id,
