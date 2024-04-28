@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_clean_api/features/user_list/domain/entities/users_entity.dart';
 import 'package:flutter_clean_api/features/user_list/presentation/providers/user_list_provider.dart';
+import 'package:flutter_clean_api/features/user_list/presentation/screens/user_detail.dart';
 import 'package:provider/provider.dart';
 
 class UserListScreen extends StatelessWidget {
@@ -29,19 +30,40 @@ class UserListScreen extends StatelessWidget {
                 }
 
                 return ListTile(
+                  onTap: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => UserDetailScreen(
+                        user: item,
+                      ),
+                    ));
+                  },
                   leading: CircleAvatar(
                     foregroundImage: NetworkImage(item.image.toString()),
                   ),
                   title: Text(item.name.toString()),
-                  subtitle: Text(item.image.toString()),
+                  subtitle: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(item.actor.toString()),
+                      Text(
+                        item.house.toString(),
+                        style: const TextStyle(
+                          fontSize: 14,
+                          color: Colors.grey,
+                        ),
+                      ),
+                    ],
+                  ),
+                  trailing: const Icon(Icons.keyboard_arrow_right),
                 );
               },
             ),
       floatingActionButton: IconButton(
-          onPressed: () {
-            context.read<UsersListProvider>().getUsersData();
-          },
-          icon: const Icon(Icons.refresh)),
+        onPressed: () {
+          context.read<UsersListProvider>().getUsersData();
+        },
+        icon: const Icon(Icons.refresh),
+      ),
     );
   }
 }
