@@ -1,7 +1,7 @@
 class WandEntity {
-  final String wood;
-  final String core;
-  final double length;
+  final String? wood;
+  final String? core;
+  final double? length;
 
   WandEntity({
     required this.wood,

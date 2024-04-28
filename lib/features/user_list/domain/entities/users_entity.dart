@@ -1,26 +1,26 @@
 import 'wand_entity.dart';
 
 class UserEntity {
-  final String id;
-  final String name;
-  final List<String> alternateNames;
-  final String species;
-  final String gender;
-  final String house;
-  final String dateOfBirth;
-  final int yearOfBirth;
-  final bool wizard;
-  final String ancestry;
-  final String eyeColour;
-  final String hairColour;
-  final WandEntity wand;
-  final String patronus;
-  final bool hogwartsStudent;
-  final bool hogwartsStaff;
-  final String actor;
+  final String? id;
+  final String? name;
+  final List<String?> alternateNames;
+  final String? species;
+  final String? gender;
+  final String? house;
+  final String? dateOfBirth;
+  final int? yearOfBirth;
+  final bool? wizard;
+  final String? ancestry;
+  final String? eyeColour;
+  final String? hairColour;
+  final WandEntity? wand;
+  final String? patronus;
+  final bool? hogwartsStudent;
+  final bool? hogwartsStaff;
+  final String? actor;
   final List<String> alternateActors;
-  final bool alive;
-  final String image;
+  final bool? alive;
+  final String? image;
 
   UserEntity({
     required this.id,

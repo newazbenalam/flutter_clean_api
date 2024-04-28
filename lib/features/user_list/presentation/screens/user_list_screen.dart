@@ -17,11 +17,19 @@ class UserListScreen extends StatelessWidget {
         itemCount: context.watch<UsersListProvider>().userList.length,
         itemBuilder: (context, index) {
           return ListTile(
-            title:
-                Text(context.watch<UsersListProvider>().userList[index].name),
+            title: Text(context
+                .watch<UsersListProvider>()
+                .userList[index]
+                .name
+                .toString()),
           );
         },
       ),
+      floatingActionButton: IconButton(
+          onPressed: () {
+            context.read<UsersListProvider>().getUsersData();
+          },
+          icon: const Icon(Icons.refresh)),
     );
   }
 }

@@ -109,7 +109,7 @@ class UsersModel extends UserEntity {
         "ancestry": ancestry,
         "eyeColour": eyeColour,
         "hairColour": hairColour,
-        "wand": wand.toJson(),
+        "wand": wand?.toJson(),
         "patronus": patronus,
         "hogwartsStudent": hogwartsStudent,
         "hogwartsStaff": hogwartsStaff,
